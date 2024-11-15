@@ -166,7 +166,8 @@ def main():
         # 채팅 기록 섹션
         st.markdown("## 채팅 기록")
 
-        user_chats = get_user_chats_with_metadata(st.session_state["user"])
+        # user_chats = get_user_chats_with_metadata(st.session_state["user"])
+        user_chats = get_user_chats(st.session_state["user"])
         if user_chats:
             grouped_chats = group_chats_by_date(user_chats)
 
